@@ -8,3 +8,10 @@ For Brother
 # install.packages("shiny")
 shiny::runGitHub("shinyheatmmapforHDY", "hanguojun007")
 ```
+
+或者下载下来运行
+
+```
+library(shiny)
+runApp("path/shinyheatmmapforHDY", launch.browser = TRUE)
+```
