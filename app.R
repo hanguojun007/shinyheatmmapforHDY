@@ -1,5 +1,6 @@
 library(shiny)
 library(reactable)
+library(ComplexHeatmap)
 
 ui <- fluidPage(
   titlePanel("Heatmap"),
@@ -47,7 +48,7 @@ server <- function(input, output, session) {
 
   output$heatmap <- renderPlot(
     {
-      ComplexHeatmap::Heatmap(
+      Heatmap(
         as.matrix(data()[selected(), col_selected()]),
         show_row_names = showRownames(),
         show_column_names = showColnames()
